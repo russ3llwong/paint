@@ -43,6 +43,7 @@ private:
     QAction *penColorAct;
     QAction *penWidthAct;
     QAction *printAct;
+    QAction *exitAct;
     QAction *clearScreenAct;
     QAction *aboutAct;
     QAction *aboutQtAct;
