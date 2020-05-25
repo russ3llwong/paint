@@ -22,6 +22,7 @@ protected:
     void closeEvent(QCloseEvent *event) override;
 
 private slots:
+    // Possible events
     void open();
     void save();
     void penColor();
@@ -29,15 +30,23 @@ private slots:
     void about();
 
 private:
+    // Tie user actions to functions
     void createActions();
     void createMenus();
+
+    // Check if there are changes
     bool maybeSave();
+    // Opens save dialog
     bool saveFile(const QByteArray &fileFormat);
+
+    // Drawing area
     ScribbleArea *scribbleArea;
+    // Menu widgets
     QMenu *saveAsMenu;
     QMenu *fileMenu;
     QMenu *optionMenu;
-    QMenu *helpMenu;
+    QMenu *helpMenu; 
+    // All Actions
     QAction *openAct;
     QList<QAction *> saveAsActs;
     QAction *penColorAct;
